@@ -1,0 +1,86 @@
+FIFO:
+	this algorithm pop the first in page out of the frame, so it maitain the time equality to reference even though the reference is hit in most time.
+
+Temporal locality:
+Page Fault Rate:
+
+	best case: 0.311688
+	worst case: 0.490991
+	
+	in these two case, we can find that even though the fault page rate in  worst case can be nearly 50%.
+
+Random Case:
+Page Fault Rate:
+	20_10_500 case in random case: 0.528
+	20_10_5000 case in random case:0.5022
+	20_19_500 case in random casse:0.096
+	20_19_5000 case in random casse:0.0578
+	
+	we can find that the more data in test file, the result is more approaching 1-(physical frame number/virtual page number).
+	So in big size of random case, it is probably a good algorithm for paging algorithm.
+
+Special locality:
+Page Fault Rate:
+	best case: 0.266667
+	worst case:0.555556
+
+	In special case, the best case is really approaching 5/20=0.25, that the equation is not like Random case's. However, the worst case is nearly 50%. It might be the feature of FIFO, even though in the worst case, it could maintain 50% accuracy.
+
+	Over all, FIFO could be a good algorithm not only the brilliant performance in some best case and random case, but the average execution result in worst case.
+
+LRU:
+Temporal locality:
+
+Page Fault Rate:
+	best case: 0.272727
+	worst case: 0,477477
+
+	In temporal locality, picking out the least and recent page performed better than FIFO.The continuous and repeated appeared reference could be hitted and would not be took out from physical memory.
+
+Random Case:
+Page Fault Rate:
+
+	20_10_500 case in random case: 	0.536
+	20_10_5000 case in random case:0.49980
+	20_19_500 case in random casse:0.1100
+	20_19_5000 case in random casse:0.0456
+	
+	Compare with FIFO, in big reference size with any ratio of physical frame number and virtual page number, the performace is approximately better than FIFO. However, in small reference size, the performace is usually worse than FIFO.
+
+Special locality:
+Page Fault Rate:
+
+	best case:0.213333
+	worst case:0.981481
+
+	In special case, LRU repeatedly take out the refernce would appear in next time, so every time it want to hit the reference, it could not find it in memory.
+
+Random 
+Temporal locality:
+Page Fault Rate:
+
+	best case average with 10 time execution: 0.3485520
+	worst case average with 10 time execution: 0.3657657	
+	
+		we cannot discover the difference of performance between best case and worst case because it randomly choose a frame which is choosed to be took out. There is no apparently evidence to show the relation between best case and worst case.
+		With the Temporal locality, in average performance, Random Algorithm would be the right choise.
+		
+Random Case:
+Page Fault Rate:
+
+	20_10_500 case average with 10 time execution in random case: 0.5014
+	20_10_5000 case average with 10 time execution in random case:0.5005
+	20_19_500 case average with 10 time execution in random casse:0.087
+	20_19_5000 case average with 10 time execution in random casse:0.05333
+	
+	In random case, there is no apparent difference with the three algorithm, but we still can find that FIFO is choosed to be the best.
+
+Special locality:
+	best case average with 10 time execution: 0.31199997
+	worst case average with 10 time execution: 0.277778
+	
+	In Random Algorithm, the worst case even perform better than best case. So there is no such best case and worst case for all three method.
+	Just for both FIFO and LRU could announce that there are best case and worse case in special locality.
+
+
+

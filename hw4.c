@@ -112,8 +112,8 @@ void fifo(FILE *fp,FILE *fout,int vp,int phy)
 		}
 	}
 
-	printf("%d/%d = %f\n",fault,total,((float)fault/(float)total));
-	fprintf(fout,"fault rate = %d/%d = %f\n",fault,total,((float)fault/(float)total));
+	printf("Page Fault Rate: %f\n",((float)fault/(float)total));
+	fprintf(fout,"Page Fault Rate: %f\n",((float)fault/(float)total));
 	
 }
 void lru(FILE *fp,FILE *fout,int vp,int phy)
